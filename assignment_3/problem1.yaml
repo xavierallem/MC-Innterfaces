@@ -1,0 +1,73 @@
+## @file <file_name>.yml
+ #  @brief Give a description of the file 
+ #  
+ #  Give full description of the file 
+ #  
+ #  @author Full name of the author 
+ #  @bug List Any bugs found in the file  
+ #
+
+---
+# Example I2C pin, the i2c-details: 1 means that the I2C device number in linux
+# is 1, i.e the This pin corresponds to /dev/i2c-1 device node in linux. 
+pin 3: 
+  i2c-details: 1
+  spi-details: null
+  uart-details: null
+  pwm-details: null
+# Example I2C pin, the i2c-details: 1 means that the I2C device number in linux
+# is 1, i.e the This pin corresponds to /dev/i2c-1 device node in linux
+pin 5: 
+  i2c-details: 1
+  spi-details: null
+  uart-details: null
+  pwm-details: null
+# Example UART pin, the uart-details: ttyS0 means that the UART device number in linux
+# is ttyS0, i.e the This pin corresponds to /dev/ttyS0 device node in linux
+pin 8: 
+  i2c-details: null
+  spi-details: null
+  uart-details: ttyS0
+  pwm-details: null
+# Example UART pin, the uart-details: ttyS0 means that the UART device number in linux
+# is ttyS0, i.e the This pin corresponds to /dev/ttyS0 device node in linux
+pin 10: 
+  i2c-details: null
+  spi-details: null
+  uart-details: ttyS0
+  pwm-details: null
+# Example PWM pin, the pwm-details: 0.2 means that the PWM device in linux
+# is chip number is 0 and channel number is 2.
+pin 12: 
+  i2c-details: null
+  spi-details: null
+  uart-details: null
+  pwm-details: 0.2
+# Example SPI pin, the spi-details: 0 means that the SPI device number in linux
+# is 0, i.e the This pin corresponds to /dev/spidev0 device node in linux
+pin 19: 
+  i2c-details: null
+  spi-details: 0
+  uart-details: null
+  pwm-details: null
+# Example SPI pin, the spi-details: 0 means that the SPI device number in linux
+# is 0, i.e the This pin corresponds to /dev/spidev0 device node in linux
+pin 21: 
+  i2c-details: null
+  spi-details: 0
+  uart-details: null
+  pwm-details: null
+# Example SPI pin, the spi-details: 0 means that the SPI device number in linux
+# is 0, i.e the This pin corresponds to /dev/spidev0 device node in linux
+pin 23: 
+  i2c-details: null
+  spi-details: 0
+  uart-details: null
+  pwm-details: null
+# Example PWM pin, the pwm-details: 0.1 means that the PWM device in linux
+# is chip number is 0 and channel number is 1.
+pin 36: 
+  i2c-details: null
+  spi-details: null
+  uart-details: null
+  pwm-details: 0.1

@@ -1,0 +1,10 @@
+---
+
+image: python:3.7
+
+build:
+  script:
+    - cd assignment_3 
+    - pip install -U pyyaml
+    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < problem1.yaml
+
