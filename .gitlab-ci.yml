@@ -6,5 +6,7 @@ build:
   script:
     - cd assignment_3 
     - pip install -U pyyaml
-    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < problem1.yaml
+    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board1.yaml
+    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board2.yaml
+    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board3.yaml
 
