@@ -1,28 +1,33 @@
 # Problem 1
 
-## Problem statement
-Study all the interfaces of a board and write down the Linux file names in a YAML file.
+### Goal : Write code for MPC4725 12-bit DAC module using Shunya Interfaces on Raspberry Pi 4
 
-### Steps 
-1. Pick 3 unique boards from the [board list](https://docs.google.com/spreadsheets/d/1in0_qqWc5r-ngrlRduTemxfzUY_cOrZYDOE2uZ5Woqc/edit?usp=sharing) 
-2. Study their interfaces by looking at their pinouts.
-3. Write down all the details of the interfaces in the boardx.yaml where `x` is board 1 or 2 or 3.
-4. Once done submit by pushing the branch with your full_name.
+### Description
 
-### YAML file 
-1. YAML file should contain all the pins on the board with UART, SPI and I2C interfaces
-2. For every pin the YAML file should contain the entry similar to this.
-```yaml
-pin 3: 
-  i2c-details: 1
-  spi-details: null
-  uart-details: null
-  pwm-details: null
-```
-Where the number `1` in front of the `i2c-details` key says that this pin 
-corresponds to `/dev/i2c-1` device node in Linux. What the pin does i.e (SDA) etc 
-can be written in the comments.
+Convert Arduino API's into Shunya Interfaces API's for MPC4725 DAC Arduino library. 
+Write code to interface MPC4725 DAC with RPI 4 over I2C and generate 0-5V output when given 
+respective 12-bit Input.
 
-## Reference Links 
-1. [YAML Syntax](https://learnxinyminutes.com/docs/yaml/) - This will help you understand YAML.
-2. [YAML Online checker](http://www.yamllint.com/) - Use this to check all your YAML files before submitting.
+Please use Arduino MPC4725 library as reference. 
+
+- [MPC4725 Arduino library](https://github.com/adafruit/Adafruit_MCP4725/)
+
+
+### For Example: 
+
+Lets say 
+#### Given (Input)
+that the  MPC4725 module is connected to the RPI4 using I2C, the example code when run
+#### Then (output)
+should loop and generate 0-5V with 0.02 V steps and a delay of 100 ms between
+each loop iteration.
+
+
+### Acceptance Criteria 
+This is the criteria to accept the assignment.
+- The code must be divided into functions 
+- **Must** have documentation for using the program.
+- Code **Must** follow the Coding Standards.
+- Code can be either in C or in CPP.
+
+#### Note: Documentation of the whole program is a must criteria for the completion of the Assignment.
