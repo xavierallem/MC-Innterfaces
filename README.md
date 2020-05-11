@@ -1,27 +1,28 @@
 # Module 3 - Master the skills - Microprocessor Interfaces 
 
-## What will I be learning in this Module?
+## What will you be learning in this Module?
 You will be learning 
-1. Few concepts of basic electronics.  
+1. Basic Electronics concepts of basic electronics.  
 2. Different types of Microprocessor Interfaces.
-3. Representation of these in Linux.
+    - Analog
+    - GPIO
+    - I2C
+    - SPI
+    - UART
+    - PWM
+3. Representation of Microprocessor Interfaces in Linux.
+4. Microprocessor Interfaces Programming
 
-## How to complete this module?
 
-#### Step 1: Learn :
-Read the course Material. You will find the course material 
-in the **Wiki** of the project.
+## Mastery Process
 
-Link to the [course material](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/wikis/home)
+1. Understand - Read and try to understand the topics for the Module.
+2. Summarize - Re-enforcing critical parts of the subject by writing them down in a short and concise Summary.
+3. Practice - Practice all your understandings, This where your brain learns the most.
 
-#### Step 2: Summarize :
-Write a summary of all the reading material in the project **Issues**.
 
-Link to [Project Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/issues)
+### Mastery Process --> Gitlab Map
 
-#### Step 3: Practice :
-Complete all assignments of the respective module. You will find all assignments
-listed in the Issues marked with your `persona` tags.
-
-Link to [Project Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/issues)
-
+1. Find all the reading material for the Module in the [Wiki](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/wikis/home)
+2. Find Steps for Assignments (Summarize + Practice) in the [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/issues)
+3. After completion of both Summary assignments and Practice Assignments submit your module for grading in [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/issues)
