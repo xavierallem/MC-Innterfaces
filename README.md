@@ -14,15 +14,13 @@ You will be learning
 4. Microprocessor Interfaces Programming
 
 
-## Mastery Process
+## How to complete the Module?
+Learning a skill happes in 3 stages Understand, Summarize & Practice (USP). This applies to the module as well.
 
-1. Understand - Read and try to understand the topics for the Module.
-2. Summarize - Re-enforcing critical parts of the subject by writing them down in a short and concise Summary.
-3. Practice - Practice all your understandings, This where your brain learns the most.
+| Process Stage | Description                                                                        | Links      |
+|---------------|------------------------------------------------------------------------------------|------------|
+| Understand    | Read course material and try to understand topics covered in the Module.           | [Wiki](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/wikis/home)   |
+| Summarize (Assignment)     | Reinforce critical parts of the subject by writing them down in concise Summaries. | [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/issues) |
+| Practice  (Assignment)    | Practice skills, to make your learning. This where your brain learns the most.     | [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/issues) |
 
-
-### Mastery Process --> Gitlab Map
-
-1. Find all the reading material for the Module in the [Wiki](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/wikis/home)
-2. Find Steps for Assignments (Summarize + Practice) in the [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/issues)
-3. After completion of both Summary assignments and Practice Assignments submit your module for grading in [Issues](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module4/issues)
+Last Step is to **Submit** your Summary and Practice Assignment in the [Issue](https://gitlab.iotiot.in/newbies/iot-internship-feb-20/module3/issues)
