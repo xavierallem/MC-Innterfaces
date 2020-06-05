@@ -1,12 +1,12 @@
 ---
 
-#image: python:3.7
-
-#build:
-#  script:
-#    - cd assignment_3 
-#    - pip install -U pyyaml
-#    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board1.yaml
-#    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board2.yaml
-#    - python -c 'import yaml, sys; print(yaml.safe_load(sys.stdin))' < board3.yaml
-
+build:armv7:
+  image: shunyaos/shunya:armv7
+  script:
+    - opkg update
+    - opkg install cmake libgpiod libgpiod-dev
+    - cd assignments/practice/
+    - mkdir build 
+    - cd build
+    - cmake ../
+    - make 
