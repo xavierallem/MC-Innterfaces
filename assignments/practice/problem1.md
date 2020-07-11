@@ -1,24 +1,20 @@
 # Problem 1
 
-### Goal : Write code for ADS1115 16-bit ADC module using Shunya Interfaces on Raspberry Pi 4
+### Purpose : Write code for reading data from the RISHI Meter 3430 using Shunya Interfaces modbus API's
+
+## Data that needs to be read from the device
+1. AC current 
+1. Voltage 
+1. Power
+1. Active energy (kWhr), 
+1. Reactive energy (kVArhr) 
+1. Apparent energy (kVAhr) 
+1. THD of voltage
+
 
 ### Description
-
-Convert Arduino API's into Shunya Interfaces API's for ADS1115 DAC Arduino library. 
-Write code to interface ADS1115 DAC with RPI 4 over I2C and read digital values from all the channels form the ADC.
-
-Please use Arduino ADS1115 library as reference. 
-
-- [ADS1115 Arduino library](https://github.com/adafruit/Adafruit_ADS1X15)
-
-
-### For Example: 
-
-Lets say 
-#### Given (Input)
-that the ADS1115 module is connected to the RPI4 using I2C, the example code when run
-#### Then (output)
-should print 16-bit digital value(0-65536) read from Channels 1, 2, 3 & 4 on separate lines.
+- Follow the approach taken in the Module 1 and write code for reading the above data from the meter using Modbus.
+- For Meter connections using RS485 assume that the meter will be connected to uart device node `/dev/ttyAMA0` 
 
 
 ### Acceptance Criteria 

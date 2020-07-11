@@ -1,24 +1,15 @@
 # Problem 2
 
-### Goal : Write code for ADS1015 12-bit ADC module using Shunya Interfaces on Raspberry Pi 4
+### Purpose : Write code for reading data from the Manas microsystems Electromagnetic Flow Meter using Shunya Interfaces modbus API's
+
+## Data that needs to be read from the device
+1. Flow of the liquid in liters per hour
+
 
 ### Description
+- Follow the approach taken in the Module 1 and write code for reading the above data from the meter using Modbus.
 
-Convert Arduino API's into Shunya Interfaces API's for ADS1015 DAC Arduino library. 
-Write code to interface ADS1015 DAC with RPI 4 over I2C and read digital values from all the channels form the ADC.
-
-Please use Arduino ADS1015 library as reference. 
-
-- [ADS1015 Arduino library](https://github.com/adafruit/Adafruit_ADS1X15)
-
-
-### For Example: 
-
-Lets say 
-#### Given (Input)
-that the ADS1015 module is connected to the RPI4 using I2C, the example code when run
-#### Then (output)
-should print 12-bit digital value(0-4096) read from Channels 1, 2, 3 & 4 on separate lines.
+- For Meter connections using RS485 assume that the meter will be connected to uart device node `/dev/ttyAMA0` 
 
 
 ### Acceptance Criteria 
