@@ -1,15 +1,19 @@
 # Problem 2
 
-### Purpose : Write code for reading data from the Manas microsystems Electromagnetic Flow Meter using Shunya Interfaces modbus API's
+### Purpose : Write code for interfacing barcode scanner to RPI
 
-## Data that needs to be read from the device
-1. Flow of the liquid in liters per hour
+### Outcomes: 
+1. C code which will print the data read by the USB barcode scanner to `stdout`.
 
 
-### Description
-- Follow the approach taken in the Module 1 and write code for reading the above data from the meter using Modbus.
+### Steps to complete 
+- Go through the tutorial on the barcode scanner on RPI 
+    - https://www.piddlerintheroot.com/barcode-scanner/
 
-- For Meter connections using RS485 assume that the meter will be connected to uart device node `/dev/ttyAMA0` 
+(This link provides video explanation and Python code for the USB barcode scanner).
+
+- Understand the python code. 
+- Convert the code in C.
 
 
 ### Acceptance Criteria 
