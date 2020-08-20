@@ -1,47 +1,31 @@
 # Problem 1
 
-### Purpose : Write code to send Heartbeat message to an MQTT topic. 
+### Purpose : Write code for BME280 sensor connected to RPI 4 over I2C using Shunya Interfaces on Raspberry Pi 4
 
-### Outcomes
-1. C Code which sends Heartbeat messages to the User specified server using MQTT 
+### Expected Outcomes
+1. C/CPP code `bme280.c` which contains Functions for reading data from the BME280 sensor
+1. C/CPP code `bme280_example.c` which contains the main function which calls the functions from the `bme280.c` file.
+1. Document on how to use the functions from the `bme280.c`
 
 ### Description
 
-Heartbeat messages are those messages that are sent to the cloud to say that the device is alive.
+Convert Arduino API's into Shunya Interfaces API's for BME280 Arduino library. 
 
-These messages are sent in JSON format so that these messages can be easily processed at the cloud.
+Write code to interface BME280 sensor with RPI 4 over I2C and write code to get values from the sensor when these functions are called.
 
-- Sample Heartbeat JSON message
-```json
- {
-    "deviceId": "186b5",
-    "timestamp": 1573002230757,
-    "eventType": "heartbeat",
-    "ipAddress": "192.0.2.0"
-}
+```c
+float temperature = getTemperature();
+float pressure = getPressure();
+int8_t humidity = getHumidity();
+float altitude = getAltitude();
 ```
 
-Currently we the architecture is that the cloud will have an MQTT broker, to which we send these messages. 
+### Inputs 
+1. Bme280 Arduino library - https://github.com/adafruit/Adafruit_BME280_Library
 
-
-Write code to publish above JSON message as heartbeat message to the MQTT topic `"device/heartbeat"`
-
-Use [paho MQTT client](https://github.com/eclipse/paho.mqtt.c) for sending MQTT messages.
-
-To make a message we need to get the values for the keys of the JSON messages 
-
-- for `deviceID` key, value should be read from a file at location `/etc/shunya/deviceid`
-- for timestamp key, value should be UNIX timestamp 
-- for `eventType`  key, value should always be `heartbeat`
-- for `ipAddress` key, value should be read from the linux system.
-
-These should be sent at a regular interval of `X` mins which will be defined by the user (take input from stdin).
-
-The user will also define the URL (endpoint) of the MQTT server. (take input from stdin)
-
-## Resources 
-1. Unix timestamp - https://www.systutorials.com/how-to-get-the-epoch-timestamp-in-c/
-2. Reading IP address in C - https://stackoverflow.com/questions/2283494/get-ip-address-of-an-interface-on-linux
+## Important Notes 
+1. BME280 can be used with either I2C or SPI interface, Please write code for I2C interface.
+1. Please use the I2C and SPI API's Shunya Interfaces Core library.
 
 
 ### Acceptance Criteria 
@@ -49,7 +33,4 @@ This is the criteria to accept the assignment.
 - The code must be divided into functions 
 - **Must** have documentation for using the program.
 - Code **Must** follow the Coding Standards.
-- Code must be in C.
-- Code must be compiled in the Shunya OS docker container.
-
-#### Note: Documentation of the whole program is a must criteria for the completion of the Assignment.
+- Code can be either in C or in CPP.

@@ -31,20 +31,6 @@
  *#####################################################################
  */
 
-/** 
- *  @brief Description on function_1
- *  
- *  Full description of the function
- *
- *  @return List all Function returns 
- */
-
-void function_1 (void)
-{
-
-        /*Make sure you comment every line */
-	
-}
 
 /** 
  *  @brief Description on main
