@@ -2,7 +2,7 @@
 cmake_minimum_required(VERSION 3.5)
 
 # Declare the Project version and the Language that the project is written in
-project(module3 VERSION 1.0.0 LANGUAGES C)
+project(module3 VERSION 1.0.0 LANGUAGES C CXX)
 
 # Set the Build Type to Release
 # Ideally there should be more Build Types, but for now there is only one
@@ -13,8 +13,7 @@ set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wformat=2 -Wall -Wextra -Winline -pipe")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fPIC")
 
 # Add rules to create the binary files
-add_executable(problem2 problem2.c)
-add_executable(problem3 problem3.c)
+add_executable(problem2 thingsboard.cxx)
 
-target_link_libraries(problem2 PUBLIC  -lm -lshunyaInterfaces_core)
-target_link_libraries(problem3 PUBLIC  -lm -lshunyaInterfaces_core)
+target_link_libraries(problem2 PUBLIC  -lm -lsiConn)
+target_link_libraries(problem2 PUBLIC  -lm -lsiCore)
