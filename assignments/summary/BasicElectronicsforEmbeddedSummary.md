@@ -58,9 +58,34 @@ Microcontrollers are generally used in projects and applications that require di
 - **Micro-Processor**:- Microprocessor has only a CPU inside them in one or few Integrated Circuits. Like microcontrollers it does not have RAM, ROM and other peripherals. 
 They are dependent on external circuits of peripherals to work.
 
-_**Example**_:- Lets us Consider Arduino Uno(Micro-controller) & Rasp Pi (Micro-Processor)
+_**Example**_:- Lets us Consider Arduino Uno(Micro-Controller) & Rasp Pi (Micro-Processor)
 
 
 ![Es](assignments/Assets/Capture.PNG)
 
 
+## Raspberry Pi
+
+
+![RS](assignments/Assets/Drawing_of_Raspberry_Pi_model_B_rev2.svg.png)
+
+- **Features**:-
+
+    - Mini Computer
+    - Limited but large power for its size
+    - No storage
+    - It is a SOC (System On Chip)
+    - We can connect shields (Shields - addon functionalities)
+    - Can connect multiple Pi’s together
+    - Microprocessor
+    - Can load a linux OS on it
+    - Pi uses ARM
+    - Connect to sensors or actuators
+
+- **Interfaces**:- 
+    - GPIO
+    - UART
+    - SPI
+    - I2C
+    - PWM
+    
