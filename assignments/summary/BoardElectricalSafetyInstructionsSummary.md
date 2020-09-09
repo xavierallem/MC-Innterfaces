@@ -43,5 +43,5 @@
 ### SPI
 
 - Spi is in default Push-pull mode however if you are using more than one slaves it is possible that the device2 can "hear" and "respond" to the master's communication with device1- which is a disturbance 
-- o overcome this problem , we use a protection circuit with pullup resistors on each the Slave Select line(CS).
+- To overcome this problem , we use a protection circuit with pullup resistors on each the Slave Select line(CS).
 Resistors value can be between 1kOhm ~10kOhm . Generally 4.7kOhm resistor is used.
