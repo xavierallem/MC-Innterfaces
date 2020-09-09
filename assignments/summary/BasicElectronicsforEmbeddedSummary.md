@@ -27,3 +27,25 @@ _**Example**_:-
 ## Analog & Digital Signals
 
 ![AD](assignments/Assets/necessity_of_digitization.png)
+
+
+- **Analog Signals**:- Analog signal is a continuous signal in which one time-varying quantity represents another time-based variable. These kind of signals works with physical values and natural 
+phenomena such as earthquake, frequency, volcano, speed of wind, weight, lighting, etc.
+
+![AD](assignments/Assets/030720_0729_AnalogvsDig1.png)
+
+_**Example**_:- Analog Multimeter.
+
+![Es](assignments/Assets/Graph-2-analogmeter.jpg)
+
+
+- **Digital Signals**:- A digital signal is a signal that is used to represent data as a sequence of separate values at any point in time. It can only take on one of a fixed number of values. 
+This type of signal represents a real number within a constant range of values. 
+
+![AD](assignments/Assets/030720_0729_AnalogvsDig2.png)
+
+_**Example**_:- Digital Multimeter
+
+![AD](assignments/Assets/digital-meter-mobiseries-original-imafjxh3uxtgewj4.png)
+
+
