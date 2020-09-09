@@ -89,3 +89,15 @@ _**Example**_:- Lets us Consider Arduino Uno(Micro-Controller) & Rasp Pi (Micro-
     - I2C
     - PWM
     
+## Serial & Parallel
+
+![SP](assignments/Assets/Communicaton.jpg)
+
+
+- ** Serial Interfaces**:-
+    - UART
+    - SPI
+    - I2C
+    
+- ** PArallel Interfaces**:- 
+    - GPIO
