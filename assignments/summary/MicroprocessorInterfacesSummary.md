@@ -66,3 +66,66 @@ name. One board may contain many UART interfaces, and all these UART interfaces 
 
 ```
 
+## Serial Peripheral Interface(SPI)
+
+![Sl](assignments/Assets/Introduction-to-SPI-Master-and-Slave.png)
+
+SPI is most commonly used for interfacing of SD card modules, RFID card reader modules, and 2.4 GHz wireless transmitter/receivers with micro-controllers.
+SPI is immune to interruption while communication
+
+The Pins are,
+
+- **MOSI (Master Output/Slave Input)** 
+- **MISO (Master Input/Slave Output)** 
+- **SCLK (Clock)**
+- **SS/CS (Slave Select/Chip Select)**
+
+
+### Clock (SCLK)
+
+System Clock synchronizes the output of data from the master to the sampling of bits by the slave. One bit data is transferred in each clock cycle. 
+The speed of communication is determined by frequency of clock signal. 
+
+### Slave Select(SS/CS)
+
+In SPI communication Slave Select is used to select the slave which master wants to communicate with, 
+master sends logic low signal on SS(active low) line as it activate at logic low
+
+### Multiple Slaves
+
+SPI can set up to for only one master and one slave but it has two ways
+
+- Master with separate Slave Select
+
+![SS](assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Separate-Slave-Select-768x787.png)
+
+- Master with Daisy-Chained
+
+![SS](assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Daisy-Chained-768x78132254.png)
+
+### MOSI & MISO
+
+The master sends data to the slave bit by bit, in serial through the MOSI line. The slave receives the data sent from the master at the MOSI pin
+
+
+### Working of SPI
+
+![Ds](assignments/Assets/SPI-Protocol-Data-Transmission-and-Connection.jpg)
+
+
+### Advantages
+
+- No start and stop bits, so the data can be streamed continuously without interruption.
+- No complicated slave addressing system like I2C.
+- Higher data transfer rate than I2C (almost twice as fast).
+- Separate MISO and MOSI lines, so data can be sent and received at the same time.
+
+
+### Disadvantages 
+
+- Uses four wires (I2C and UARTs use two).
+- No acknowledgement that the data has been successfully received (I2C has this).
+- No form of error checking like the parity bit in UART.
+- Only allows for a single master.
+
+
