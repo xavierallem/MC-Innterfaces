@@ -172,3 +172,9 @@ Working Can be understood here :- [Link](https://youtu.be/6IAkYpmA1DQ)
 - The size of the data frame is limited to 8 bits.
 - More complicated hardware needed to implement than SPI.
 
+## Pulse Width Modulation(PWM)
+
+![Pw](assignments/Assets/PWM_1.gif)
+
+Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. 
+The duration of "on time" is called the pulse width.
