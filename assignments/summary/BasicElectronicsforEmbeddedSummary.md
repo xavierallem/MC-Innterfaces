@@ -94,10 +94,10 @@ _**Example**_:- Lets us Consider Arduino Uno(Micro-Controller) & Rasp Pi (Micro-
 ![SP](assignments/Assets/Communicaton.jpg)
 
 
-- ** Serial Interfaces**:-
+- **Serial Interfaces**:-
     - UART
     - SPI
     - I2C
     
-- ** PArallel Interfaces**:- 
+- **Parallel Interfaces**:- 
     - GPIO
