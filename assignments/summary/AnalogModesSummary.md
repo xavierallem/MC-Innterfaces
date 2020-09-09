@@ -13,3 +13,12 @@ sampling the input, limiting the allowable bandwidth of the input signal.
 
 The resolution of the converter indicates the number of different, ie discrete, values it can produce over the allowed range of analog input values. Thus a particular resolution determines the magnitude of the quantization error and \
 therefore determines the maximum possible signal-to-noise ratio for an ideal ADC without the use of oversampling.
+
+
+
+## Digital to Analog Converter(DAC)
+
+In electronics, a digital-to-analog converter (DAC, D/A, D2A, or D-to-A) is a system that converts a digital signal into an analog signal.
+DACs are commonly used in music players to convert digital data streams into analogue audio signals.
+
+![Dac](assignments/Assets/dac.jpg)
