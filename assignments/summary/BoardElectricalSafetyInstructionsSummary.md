@@ -25,3 +25,23 @@
 - Use motors with transistors and never connect  voltage higher than board voltage.
 
 
+## Guidelines for using interfaces(UART,I2C,SPI)
+
+### UART
+
+- While connecting the Tx Rx pins ensure that they are connected properly
+- f the device1 works on 5v and device2 works at 3.3v use voltage divider
+- Senor interfacing using UART might require a protection circuit.
+
+
+### I2C
+
+- SDA and SDL lines must be protected by using pull-up registers on both lines.
+- If you use the inbuilt pull-up registers in the board you won't need an external circuit for pull-up resistors
+
+
+### SPI
+
+- Spi is in default Push-pull mode however if you are using more than one slaves it is possible that the device2 can "hear" and "respond" to the master's communication with device1- which is a disturbance 
+- o overcome this problem , we use a protection circuit with pullup resistors on each the Slave Select line(CS).
+Resistors value can be between 1kOhm ~10kOhm . Generally 4.7kOhm resistor is used.
