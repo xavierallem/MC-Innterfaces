@@ -49,3 +49,18 @@ _**Example**_:- Digital Multimeter
 ![AD](assignments/Assets/digital-meter-mobiseries-original-imafjxh3uxtgewj4.png)
 
 
+
+## Micro-controller Vs Micr0-processor
+
+- **Micro-Controller**:- It’s like a small computer on a single IC. It contains a processor core, ROM, RAM and I/O pins dedicated to perform various tasks. 
+Microcontrollers are generally used in projects and applications that require direct control of user. 
+
+- **Micro-Processor**:- Microprocessor has only a CPU inside them in one or few Integrated Circuits. Like microcontrollers it does not have RAM, ROM and other peripherals. 
+They are dependent on external circuits of peripherals to work.
+
+_**Example**_:- Lets us Consider Arduino Uno(Micro-controller) & Rasp Pi (Micro-Processor)
+
+
+![Es](assignments/Assets/Capture.PNG)
+
+
