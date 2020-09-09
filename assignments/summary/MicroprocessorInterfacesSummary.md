@@ -129,3 +129,46 @@ The master sends data to the slave bit by bit, in serial through the MOSI line. 
 - Only allows for a single master.
 
 
+## Inter-Integrated Circuit(I2C)
+
+
+![Ic](assignments/Assets/Introduction-to-I2C-Single-Master-Single-Slave.png)
+
+
+The pins are,
+
+- SDA (Serial Data) 
+- SCL (Serial Clock) 
+
+
+![pl](assignments/Assets/i2c1.gif)
+
+
+### Addressing
+I2C  uses specified addresses for slave. The master sends the address of the slave it wants to communicate with to every slave connected to it. Each slave then compares the address sent from the master to its own address. If the address matches, it sends a low voltage ACK bit back to the master. 
+
+### Read/Write Bit:
+Address frame includes one bit at the end of frame. When it is logic 1 then it informs to slave that master is wanted read data from it and when it is logic 0 then it informs to slave that master wants to write some data on it.
+
+### Data Frame:
+Data frame contains actual data which master wanted to be read or write on slave. After the master detects the ACK bit from the slave, the first data frame is ready to be sent.Data frame is always 8 bit long and send MSB first. Each data frame is immediately followed by an ACK/NACK bit to verify that the frame has been received successfully. The ACK bit must be received by either the master or the slave  before the next data frame can be sent.
+
+
+Working Can be understood here :- [Link](https://youtu.be/6IAkYpmA1DQ)
+
+
+### Advantages
+
+- Only uses two wires.
+- Supports multiple masters and multiple slaves.
+- ACK/NACK bit gives confirmation that each frame is transferred successfully.
+- Hardware is less complicated than with UARTs.
+- Well known and widely used protocol.
+
+
+### Disadvantages
+
+- Slower data transfer rate than SPI.
+- The size of the data frame is limited to 8 bits.
+- More complicated hardware needed to implement than SPI.
+
