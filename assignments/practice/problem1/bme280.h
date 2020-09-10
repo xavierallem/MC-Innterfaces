@@ -20,7 +20,7 @@
 #ifndef __BME280_H__
 #define __BME280_H__
 
-#include <stdio.h>
+
 #include <shunyaInterfaces.h>
 #include <Wire.h>
 
