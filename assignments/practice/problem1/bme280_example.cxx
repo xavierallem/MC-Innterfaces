@@ -1,7 +1,7 @@
-/** @file <file_name>.c
+/** @file bme280_example.c
  *  @brief Give a description of the file 
  *  
- *  Give full description of the file 
+ *  Calculates Temperature, Humidity, Pressure, Altitude 
  *  
  *  @author Full name of the author 
  *  @bug List Any bugs found in the file  
@@ -34,41 +34,7 @@
  *#####################################################################
  */
 
-/*-------Create Object of driver----*/
-BME280 bme;
-unsigned long delayTime;
 
-/** 
- *  @brief Description Func_1
- *  
- *  Initializing
- *
- *  @return  
- */
- void setup() {
-    
-    
-    /*-------Variable for i2c---------*/
-    unsigned status;
-    
-    /*-------Begin i2c---------*/
-    status = bme.begin(0x76, &Wire2);  
-    // You can also pass in a Wire library object like &Wire2
-    
-    if (!status) {
-      /*---------Error Details-----------*/
-        printf("Could not find a valid BME280 sensor, check wiring, address, sensor ID! \n");
-        printf("SensorID was: 0x"); printf(bme.sensorID()); 
-        printf("        ID of 0xFF probably means a bad address, a BMP 180 or BMP 085\n");
-       
-        while (1) delay(10);
-    }
-    
-    printf("-- Starting --\n");
-    
-
-    printf("\n");
-}
 /** 
  *  @brief Description on main
  *  
@@ -80,16 +46,16 @@ unsigned long delayTime;
 
 int main (void)
 {
-  
-setup();
+  printf("----Starting----");
+  begin();
 /*----Temperature Storing variable-------*/
-float temperature = bme.getTemperature();
+float temperature = getTemperature();
 /*------Pressure Storing Variable----------*/
-float pressure = bme.getPressure();
+float pressure = getPressure();
 /*------Humidity Storing Variable ----------*/
-int8_t humidity = bme.getHumidity();
+int8_t humidity = getHumidity();
 /*-------Altitude storing Variable---------*/
-float altitude = bme.getAltitude();
+float altitude = getAltitude();
 
 /*-------Print The Values---------*/
 printf(" The Temperature is : %f \n",temperature);
