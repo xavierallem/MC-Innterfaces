@@ -139,3 +139,71 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
  wireEnd();
  
 ```
+
+### SPI API
+
+
+- **spiBegin()**:- Initializes the SPI bus.
+
+*eg.*
+```c++
+  spiBegin();
+ 
+```
+
+
+- **spiBeginTransaction()**:- Starts SPI communication with its clock frequemcy , Bit order and mode
+
+*eg.*
+```c++
+ spiBeginTransaction(50000, MSBFIRST, 0);
+ 
+```
+
+- **spiTransfer()**:- Write 8 bits (1 byte) of data to the SPI bus.
+
+*eg.*
+```c++
+ spiTransfer(0x5D);
+ 
+```
+
+- **spiEndTransaction()**:- Ends the SPI communication.
+
+*eg.*
+```c++
+  spiEndTransaction();
+ 
+```
+
+- **spiEnd()**:- Ends the SPI device.
+
+*eg.*
+```c++
+  spiEnd();
+ 
+```
+
+- **spiSetBitOrder()**:-  Set the bit order to MSB or LSB first.
+
+*eg.*
+```c++
+  spiSetBitOrder(MSBFIRST);
+ 
+```
+
+- **spiSetClock()**:-   Set SPI clock rate
+
+*eg.*
+```c++
+  spiSetClock(500000);
+ 
+```
+
+- **spiSetDataMode()**:-   Set SPI mode
+
+*eg.*
+```c++
+  spiSetDataMode(0);//0 to 3
+ 
+```
