@@ -2,9 +2,9 @@
 
 Shunya interfaces for programming the microprocessor Interfaces are given below
 
-## Shunya Interfaces Core API
+# Shunya Interfaces Core API
 
-### GPIO API
+## GPIO API
 
 - **pinmode()**:- Sets the direction of the GPIO pin to INPUT or OUTPUT
 
@@ -25,7 +25,7 @@ Shunya interfaces for programming the microprocessor Interfaces are given below
  digitalRead(3);
 ```
 
-### Interrupt API
+## Interrupt API
 
 - **attachInterrupt()**:- Sets the digital value of the GPIO pin with interrupt exe of isr and its mode.
 
@@ -34,7 +34,7 @@ Shunya interfaces for programming the microprocessor Interfaces are given below
 attachInterrupt(30, isr, INT_EDGE_BOTH);
 ```
 
-### PWM API
+## PWM API
 
 - **softPwmBegin()**:- Start the PWM at a initial duty cycle and a defined Pulse width
 
@@ -57,7 +57,7 @@ attachInterrupt(30, isr, INT_EDGE_BOTH);
  softPwmEnd(40);
 ```
 
-### Delay API
+## Delay API
 
 
 - **delay()**:- Code sleeps for given milliseconds
@@ -75,7 +75,7 @@ delayMicroseconds(50);
 ```
 
 
-### I2C API
+## I2C API
 
 
 - **wireBegin()**:- Initializes the I2C device
@@ -140,7 +140,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
  
 ```
 
-### SPI API
+## SPI API
 
 
 - **spiBegin()**:- Initializes the SPI bus.
@@ -208,7 +208,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
  
 ```
 
-### UART API
+## UART API
 
 
 - **serialOpen()**:-   Initialize the serial port
