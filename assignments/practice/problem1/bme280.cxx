@@ -426,7 +426,7 @@ float BME280::getTemperature(void) {
 float BME280::getPressure(void) {
   int64_t var1, var2, p;
 
-  readTemperature(); // must be done first to get t_fine
+  getTemperature(); // must be done first to get t_fine
 
   int32_t adc_P = read24(BME280_REGISTER_PRESSUREDATA);
   if (adc_P == 0x800000) // value in case pressure measurement was disabled
@@ -459,7 +459,7 @@ float BME280::getPressure(void) {
  *  @returns the humidity value read from the device
  */
 float BME280::getHumidity(void) {
-  readTemperature(); // must be done first to get t_fine
+  getTemperature(); // must be done first to get t_fine
 
   int32_t adc_H = read16(BME280_REGISTER_HUMIDDATA);
   if (adc_H == 0x8000) // value in case humidity measurement was disabled
@@ -506,7 +506,7 @@ float BME280::getAltitude(float seaLevel) {
   // at high altitude. See this thread for more information:
   //  http://forums.adafruit.com/viewtopic.php?f=22&t=58064
 
-  float atmospheric = readPressure() / 100.0F;
+  float atmospheric = getPressure() / 100.0F;
   return 44330.0 * (1.0 - pow(atmospheric / seaLevel, 0.1903));
 }
 
