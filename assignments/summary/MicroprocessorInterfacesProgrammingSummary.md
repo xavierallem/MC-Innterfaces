@@ -85,6 +85,7 @@ wireBegin(1); //1 is the board I2C 1
 ```
 
 - **wireBeginTransmission()**:- Starts I2C communication
+
 *eg.*
 ```c++
 wireBeginTransmission(0x23); //0x23 is the device address
@@ -92,6 +93,7 @@ wireBeginTransmission(0x23); //0x23 is the device address
 ```
 
 - **wireWrite()**:- Send data to the I2C device
+
 *eg.*
 ```c++
 wireWrite(1);
@@ -99,6 +101,7 @@ wireWrite(1);
 ```
 
 - **wireRequestFrom()**:- Request Data from the I2C device
+
 *eg.*
 ```c++
 wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
@@ -106,6 +109,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
 ```
 
 - **wireAvailable()**:- Check number of bytes available to read from the device
+
 *eg.*
 ```c++
  ret = wireAvailable();
@@ -113,6 +117,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
 ```
 
 - **wireRead()**:- Read from the I2C device.
+
 *eg.*
 ```c++
  val = wireRead();
@@ -120,6 +125,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
 ```
 
 - **wireEndTransmission()**:- End communication to the I2C device
+
 *eg.*
 ```c++
  wireEndTransmission();
@@ -127,6 +133,7 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
 ```
 
 - **wireEnd()**:- De-initialize the I2C device
+
 *eg.*
 ```c++
  wireEnd();
