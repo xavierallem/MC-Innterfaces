@@ -8,19 +8,19 @@ Shunya interfaces for programming the microprocessor Interfaces are given below
 
 - **pinmode()**:- Sets the direction of the GPIO pin to INPUT or OUTPUT
 
-eg.
+*eg.*
 ```c++
  pinmode(1,INPUT);
 ```
 - **digitalWrite()**:- Sets the digital value of the GPIO pin
 
-eg.
+*eg.*
 ```c++
  digitalWrite(1,HIGH);
 ```
 - **digitalRead()**:- Read digital value of the GPIO pin
 
-eg.
+*eg.*
 ```c++
  digitalRead(3);
 ```
@@ -29,7 +29,7 @@ eg.
 
 - **attachInterrupt()**:- Sets the digital value of the GPIO pin with interrupt exe of isr and its mode.
 
-eg.
+*eg.*
 ```c++
 attachInterrupt(30, isr, INT_EDGE_BOTH);
 ```
@@ -38,22 +38,97 @@ attachInterrupt(30, isr, INT_EDGE_BOTH);
 
 - **softPwmBegin()**:- Start the PWM at a initial duty cycle and a defined Pulse width
 
-eg.
+*eg.*
 ```c++
  softPwmWrite(40, 60);
 ```
 
-- **softPwmWrite()**:-Change the PWM duty cycle.
+- **softPwmWrite()**:- Change the PWM duty cycle.
 
-eg.
+*eg.*
 ```c++
  softPwmWrite(40, 60);
 ```
 
-- **softPwmEnd()**:-Stop the PWM on a pin.
+- **softPwmEnd()**:- Stop the PWM on a pin.
 
-eg.
+*eg.*
 ```c++
  softPwmEnd(40);
 ```
 
+### Delay API
+
+
+- **delay()**:- Code sleeps for given milliseconds
+
+*eg.*
+```c++
+delay(50);
+```
+
+- **delayMicroseconds()**:- Code sleeps for given microseconds
+
+*eg.*
+```c++
+delayMicroseconds(50);
+```
+
+
+### I2C API
+
+
+- **wireBegin()**:- Initializes the I2C device
+*eg.*
+```c++
+wireBegin(1); //1 is the board I2C 1
+```
+
+- **wireBeginTransmission()**:- Starts I2C communication
+*eg.*
+```c++
+wireBeginTransmission(0x23); //0x23 is the device address
+
+```
+
+- **wireWrite()**:- Send data to the I2C device
+*eg.*
+```c++
+wireWrite(1);
+
+```
+
+- **wireRequestFrom()**:- Request Data from the I2C device
+*eg.*
+```c++
+wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
+
+```
+
+- **wireAvailable()**:- Check number of bytes available to read from the device
+*eg.*
+```c++
+ ret = wireAvailable();
+ 
+```
+
+- **wireRead()**:- Read from the I2C device.
+*eg.*
+```c++
+ val = wireRead();
+ 
+```
+
+- **wireEndTransmission()**:- End communication to the I2C device
+*eg.*
+```c++
+ wireEndTransmission();
+ 
+```
+
+- **wireEnd()**:- De-initialize the I2C device
+*eg.*
+```c++
+ wireEnd();
+ 
+```
