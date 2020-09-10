@@ -207,3 +207,70 @@ wireRequestFrom(0x23,5); //0x23 is the address of the I2C device
   spiSetDataMode(0);//0 to 3
  
 ```
+
+### UART API
+
+
+- **serialOpen()**:-   Initialize the serial port
+
+*eg.*
+```c++
+  serialOpen("1",115200)
+ 
+```
+
+- **serialEnd()**:-  Release the serial port
+
+*eg.*
+```c++
+  serialEnd()
+ 
+```
+
+- **serialRead()**:- Get a single character from the serial device
+
+*eg.*
+```c++
+  serialRead()
+ 
+```
+
+- **serialPrint()**:- Print over Serial interface
+
+*eg.*
+```c++
+  serialPrint("Hello World");
+ 
+```
+
+- **serialPrintln()**:- Print over Serial interface with a new line
+
+*eg.*
+```c++
+  serialPrintln("Hello World");
+ 
+```
+
+- **serialWrite()**:- Send a single character to the serial port
+
+*eg.*
+```c++
+  serialWrite("I");
+ 
+```
+
+- **serialAvailable()**:- Return the number of bytes of data available to be read in the serial port
+
+*eg.*
+```c++
+  serialAvailable()
+ 
+```
+
+- **serialFlush()**:- Flush the serial buffers (both tx & rx)
+
+*eg.*
+```c++
+ serialFlush()
+ 
+```
