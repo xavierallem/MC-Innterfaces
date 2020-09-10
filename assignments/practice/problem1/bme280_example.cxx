@@ -3,8 +3,8 @@
  *  
  *  Calculates Temperature, Humidity, Pressure, Altitude 
  *  
- *  @author Full name of the author 
- *  @bug List Any bugs found in the file  
+ *  @author Allen  
+ *  @bug Didn't find any  
  */
 
 /*
