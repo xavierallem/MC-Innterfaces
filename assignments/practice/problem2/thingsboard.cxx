@@ -110,7 +110,7 @@ static void rpc_callback(int topic_len, char* topic_name, int payload_len, char*
 	/* Send response back to the RPC server to update the RPC success status */
 	char response[256];
 	sprintf(response, "{\"device\":\"%s\", \"id\":%s, \"data\":{\"success\":%s}}", device, d["data"]["id"].GetString(), (outcome == 0) ? "true" : "false");
-    /* publish the response */
+      /* publish the response */
 	mqttPublish(&broker1,"v1/gateway/rpc", "%s", response);
 }
 
@@ -127,7 +127,7 @@ static void rpc_callback(int topic_len, char* topic_name, int payload_len, char*
  */
 void connectToThingsboard()
 {
-	/* Send broker details */
+	  /* Send broker details */
 	mqttConnect(&broker1);
 }
 
@@ -137,7 +137,7 @@ void connectToThingsboard()
  */
 void disconnectFromThingsboard()
 {
-    /* Disconnect */
+      /* Disconnect */
 	mqttDisconnect();
 }
 
@@ -148,7 +148,7 @@ void disconnectFromThingsboard()
 int publishTelemetryToThingsboard(const char* jsonObject);
 
 {
-    /* Publish Telemetry data*/
+      /* Publish Telemetry data*/
 	mqttPublish(&broker1,"v1/gateway/telemetry", "%s", jsonObject);
 }
 
