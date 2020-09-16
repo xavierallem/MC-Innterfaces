@@ -32,6 +32,9 @@
 static Attributes_Callback userAttribsCallback;
 static RPC_Callback userRPCCallback;
 
+/* Create New Instance */
+mqttObj broker1 = newMqtt("mqttbroker1");
+
 /*
  *#####################################################################
  *  Process block
@@ -107,7 +110,8 @@ static void rpc_callback(int topic_len, char* topic_name, int payload_len, char*
 	/* Send response back to the RPC server to update the RPC success status */
 	char response[256];
 	sprintf(response, "{\"device\":\"%s\", \"id\":%s, \"data\":{\"success\":%s}}", device, d["data"]["id"].GetString(), (outcome == 0) ? "true" : "false");
-	mqttPublish("v1/gateway/rpc", "%s", response);
+    /* publish the response */
+	mqttPublish(&broker1,"v1/gateway/rpc", "%s", response);
 }
 
 /*
@@ -121,12 +125,10 @@ static void rpc_callback(int topic_len, char* topic_name, int payload_len, char*
  * @brief Connect to Thingsboard
  * 
  */
-void connectToThingsboard(struct ThingsboardSettings set)
+void connectToThingsboard()
 {
-	struct MQTTSettings mqttSet;
-	strcpy(mqttSet.hostURL, set.hostname);
-	strcpy(mqttSet.usrName, set.accessToken);
-	mqttConnect(mqttSet);
+	/* Send broker details */
+	mqttConnect(&broker1);
 }
 
 /**
@@ -135,6 +137,7 @@ void connectToThingsboard(struct ThingsboardSettings set)
  */
 void disconnectFromThingsboard()
 {
+    /* Disconnect */
 	mqttDisconnect();
 }
 
@@ -143,8 +146,10 @@ void disconnectFromThingsboard()
  * 
  */
 int publishTelemetryToThingsboard(const char* jsonObject);
+
 {
-	mqttPublish("v1/gateway/telemetry", "%s", jsonObject);
+    /* Publish Telemetry data*/
+	mqttPublish(&broker1,"v1/gateway/telemetry", "%s", jsonObject);
 }
 
 /**
@@ -153,7 +158,8 @@ int publishTelemetryToThingsboard(const char* jsonObject);
  */
 int publishAttributeToThingsboard(const char* jsonObject)
 {
-	mqttPublish("v1/gateway/attributes", "%s", jsonObject);
+    /* Publish Attribute */
+	mqttPublish(&broker1,"v1/gateway/attributes", "%s", jsonObject);
 }
 
 /**
@@ -166,7 +172,8 @@ void subscribeToAttributesFromThingsboard(Attributes_Callback userCallback)
 	// JSON to retrieve the device name and attributes data object
 	// and then calls the userCallback with the retrieved params
 	userAttribsCallback = userCallback;
-	mqttSubscribe("v1/gateway/attributes", attribs_callback);
+    /* Subscribe */
+	mqttSubscribe(&broker1,"v1/gateway/attributes", attribs_callback);
 }
 
 /**
@@ -180,7 +187,7 @@ void subscribeToRPCFromThingsboard(RPC_Callback userCallback);
 	// parameters to the method, then calls the userCallback 
 	// and finally publishes the success message back to server
 	userRPCCallback = userCallback;
-	mqttSubscribe("v1/gateway/rpc", rpc_callback);
+	mqttSubscribe(&broker1,"v1/gateway/rpc", rpc_callback);
 }
 
 /**
@@ -189,7 +196,7 @@ void subscribeToRPCFromThingsboard(RPC_Callback userCallback);
  */
 void notifyDeviceConnectToThingsboard(const char* deviceName)
 {
-	mqttPublish("v1/gateway/connect", "{\"device\":\"%s\"}", deviceName);
+	mqttPublish(&broker1,"v1/gateway/connect", "{\"device\":\"%s\"}", deviceName);
 }
 
 /**
@@ -198,5 +205,5 @@ void notifyDeviceConnectToThingsboard(const char* deviceName)
  */
 void notifyDeviceDisonnectToThingsboard(const char* deviceName)
 {
-	mqttPublish("v1/gateway/disconnect", "{\"device\":\"%s\"}", deviceName);
+	mqttPublish(&broker1,"v1/gateway/disconnect", "{\"device\":\"%s\"}", deviceName);
 }
