@@ -45,22 +45,7 @@ using namespace rapidjson;
  *  Solve all your problems here
  *#####################################################################
  */
-/**
- *  @brief initialize
- *
- *  Connecting to ThingsBoards
- *
- *  @return fp
- */
-void initialize(){
-    /* Defining settings struct*/
-    struct ThingsboardSettings ts;
-    /* Copying hostname and token id to settings struct*/
-    strcpy(ts.hostname,"HostNAme");
-    strcpy(ts.accessToken,"Token_ID");
-    /* Connecting */
-    connectToThingsboard(ts);
-}
+
 
 /**
  *  @brief Description on main
@@ -72,11 +57,13 @@ void initialize(){
  */
 
 int main(){
-    /*Connection function*/
-    initialize();
+    /* Connect to thingsboard */
+    connectToThingsboard()
+    /* Send Device info */
+    notifyDeviceConnectToThingsboard("Raspi")
     /*Json file to be parsed*/
     const char* json = "{\"Temperature\":30,\"Humidity\":10}";
-     /*Initializing document variable*/
+    /*Initializing document variable*/
     Document d;
     /*Parsing the json */
     d.Parse(json);
@@ -88,7 +75,9 @@ int main(){
     d.Accept(writer);
     /* Publish the json values*/
     publishTelemetryToThingsboard(buffer.GetString());
-    /* Disconnect ffrom thingsboards*/
+    /* Deisconnect device info */
+    notifyDeviceConnectToThingsboard("Raspi")
+    /* Disconnect from thingsboards*/
     disconnectFromThingsboard();
 
 }
