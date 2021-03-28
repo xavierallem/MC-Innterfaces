@@ -3,7 +3,7 @@
 ## Analog to Digital Converter (ADC)
 
 An ADC converts a continuous-time and continuous-amplitude analog signal to a discrete-time and discrete-amplitude digital signal. The conversion involves quantization of the input, so it necessarily introduces a small amount of error or noise. Furthermore, instead of continuously performing the conversion, an ADC does the conversion periodically, 
-sampling the input, limiting the allowable bandwidth of the input signal. 
+sampling the input, limiting the allowable bandwidth of the input signal . 
 
 ![lol](assignments/Assets/0418_adc_signal_2.png)
 
