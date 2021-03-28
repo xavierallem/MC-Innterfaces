@@ -7,7 +7,7 @@ sampling the input, limiting the allowable bandwidth of the input signal .
 
 ![lol](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/0418_adc_signal_2.png)
 
-![lo](assignments/Assets/Screenshot_from_2019-06-20_14-47-28.png)
+![lo](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Screenshot_from_2019-06-20_14-47-28.png)
 
 ### Resolution
 
@@ -21,4 +21,4 @@ therefore determines the maximum possible signal-to-noise ratio for an ideal ADC
 In electronics, a digital-to-analog converter (DAC, D/A, D2A, or D-to-A) is a system that converts a digital signal into an analog signal.
 DACs are commonly used in music players to convert digital data streams into analogue audio signals.
 
-![Dac](assignments/Assets/dac.jpg)
+![Dac](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/dac.jpg)
