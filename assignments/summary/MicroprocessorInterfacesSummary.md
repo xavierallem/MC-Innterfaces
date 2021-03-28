@@ -4,20 +4,20 @@
 
 A GPIO (general-purpose input/output) port handles both incoming and outgoing digital signals. GPIO can be used as Input or Output.
 
-![Gp](assignments/Assets/GPIO-Block-Diagram-3_Q640.jpg)
+![Gp](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/GPIO-Block-Diagram-3_Q640.jpg)
 
 
 ## Universal Asynchronous Receiver Transmitter(UART)
 
 
-![U](assignments/Assets/Introduction-to-UART-Data-Transmission-Diagram.png)
+![U](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-UART-Data-Transmission-Diagram.png)
 
-![U](assignments/Assets/Introduction-to-UART-Basic-Connection-Diagram.png)
+![U](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-UART-Basic-Connection-Diagram.png)
 
 **UART** is a Universal Asynchronous Receiver Transmitter used for serial communication in embedded systems. It has two lines Tx(Transmit) and Rx(Receive).wo UARTs can communicate directly. UART can convert parallel data coming from controller device into the serial 
 data it also add extra bits to it which are start,parity and stop bits.
 
-![U](assignments/Assets/UART-Communication.jpg)
+![U](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/UART-Communication.jpg)
 
 - **Start Bit**:- UART data transmission line held at high logic level when it is not transferring any data. To start transmission,
 the transmitting UART pulls the transmission line from high to low for one clock cycle
@@ -68,7 +68,7 @@ name. One board may contain many UART interfaces, and all these UART interfaces 
 
 ## Serial Peripheral Interface(SPI)
 
-![Sl](assignments/Assets/Introduction-to-SPI-Master-and-Slave.png)
+![Sl](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-SPI-Master-and-Slave.png)
 
 SPI is most commonly used for interfacing of SD card modules, RFID card reader modules, and 2.4 GHz wireless transmitter/receivers with micro-controllers.
 SPI is immune to interruption while communication
@@ -97,11 +97,11 @@ SPI can set up to for only one master and one slave but it has two ways
 
 - Master with separate Slave Select
 
-![SS](assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Separate-Slave-Select-768x787.png)
+![SS](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Separate-Slave-Select-768x787.png)
 
 - Master with Daisy-Chained
 
-![SS](assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Daisy-Chained-768x78132254.png)
+![SS](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-SPI-Multiple-Slave-Configuration-Daisy-Chained-768x78132254.png)
 
 ### MOSI & MISO
 
@@ -110,7 +110,7 @@ The master sends data to the slave bit by bit, in serial through the MOSI line. 
 
 ### Working of SPI
 
-![Ds](assignments/Assets/SPI-Protocol-Data-Transmission-and-Connection.jpg)
+![Ds](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/SPI-Protocol-Data-Transmission-and-Connection.jpg)
 
 
 ### Advantages
@@ -132,7 +132,7 @@ The master sends data to the slave bit by bit, in serial through the MOSI line. 
 ## Inter-Integrated Circuit(I2C)
 
 
-![Ic](assignments/Assets/Introduction-to-I2C-Single-Master-Single-Slave.png)
+![Ic](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/Introduction-to-I2C-Single-Master-Single-Slave.png)
 
 
 The pins are,
@@ -141,7 +141,7 @@ The pins are,
 - SCL (Serial Clock) 
 
 
-![pl](assignments/Assets/i2c1.gif)
+![pl](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/i2c1.gif)
 
 
 ### Addressing
@@ -174,7 +174,7 @@ Working Can be understood here :- [Link](https://youtu.be/6IAkYpmA1DQ)
 
 ## Pulse Width Modulation(PWM)
 
-![Pw](assignments/Assets/PWM_1.gif)
+![Pw](https://github.com/xavierallem/MC-Innterfaces/blob/master/assignments/Assets/PWM_1.gif)
 
 Pulse Width Modulation, or PWM, is a technique for getting analog results with digital means. Digital control is used to create a square wave, a signal switched between on and off. This on-off pattern can simulate voltages in between full on (5 Volts) and off (0 Volts) by changing the portion of the time the signal spends on versus the time that the signal spends off. 
 The duration of "on time" is called the pulse width.
